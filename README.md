@@ -23,3 +23,9 @@
 * for loop
 * while loop
 * function with variable and return variable
+
+#### txt_file_check.py
+
+* os module: listdir, join, getmtime
+* check file extension
+* for loop
