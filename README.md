@@ -26,6 +26,6 @@
 
 #### txt_file_check.py
 
-* os module: listdir, join, getmtime
-* check file extension
 * for loop
+* os module: listdir(), path.join(), path.getmtime()
+* check file extension
