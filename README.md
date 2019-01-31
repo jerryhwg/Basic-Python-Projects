@@ -31,6 +31,12 @@
 * while loop
 * function with variable and return variable
 
+#### drill_db_init_ops.py
+
+* create database
+* add data from a tuple
+* read data with files with ".txt"
+
 #### drill_txt_file_check.py
 
 * for loop
