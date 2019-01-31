@@ -9,6 +9,12 @@
 * dunder method
 * comment
 
+#### basic_class.py
+
+* parent, child class
+* inheritance
+* instantiate
+
 #### basic_db_init.py
 
 * work with database (sqlite3)
