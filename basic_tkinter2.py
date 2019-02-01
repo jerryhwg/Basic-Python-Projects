@@ -42,7 +42,7 @@ class ParentWindow(Frame): # ParentWindow(child) inherits from Frame(parent clas
          
          ## Button
          self.btnSubmit = Button(self.master, text="Submit", width=10, height=2, command=self.submit) # command to call for a function
-         self.btnSubmit.grid(row=2, column=1, padx=(0,0), pady=(30,0), sticky=NE)
+         self.btnSubmit.grid(row=2, column=1, padx=(0,0), pady=(30,0), sticky=NE) # sticky: stick to NE
 
          self.btnCancel = Button(self.master, text="Cancel", width=10, height=2, command=self.cancel)
          self.btnCancel.grid(row=2, column=1, padx=(0,90), pady=(30,0), sticky=NE)
@@ -50,9 +50,9 @@ class ParentWindow(Frame): # ParentWindow(child) inherits from Frame(parent clas
     def submit(self):
         fn = self.varFName.get() # get a text(for firstname) input and stored it as fn
         ln = self.varLName.get()
-        self.lblDisplay.config(text='Hello {} {}!'.format(fn,ln)) # display fn, ln together
+        self.lblDisplay.config(text='Hello {} {}!'.format(fn,ln)) # present fn, ln in lblDisplay(label)
 
-    def cancel(self):
+    def cancel(self): # part of this class, so refer to as self
         self.master.destroy() # close the main(tkinter) window
 
 
