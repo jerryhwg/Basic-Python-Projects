@@ -37,6 +37,11 @@
 * while loop
 * function with variable and return variable
 
+#### basic_tkinter2.py
+
+* tkinter module for GUI
+* form, submit, display
+
 #### drill_db_init_ops.py
 
 * create database
