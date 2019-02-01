@@ -1,5 +1,12 @@
 # Basic-Python-Projects
 
+### phonebook
+
+* phonebook app
+* python tkinter module
+* sqlite3 database
+* separate modules
+
 ### game_nice_mean.py
 
 * passing in variables
