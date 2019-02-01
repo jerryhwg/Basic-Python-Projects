@@ -59,6 +59,6 @@ def load_gui(self):
 
 
 if __name__ == "__main__":
-    pass    # pass: if you run the script directly, it will ignore all the above codes
+    pass    # pass: run this code from main only, but not directly by running this file
 
 
