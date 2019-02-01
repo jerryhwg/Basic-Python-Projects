@@ -41,6 +41,8 @@
 
 * tkinter module for GUI
 * form, submit, display
+* grid(), pack()
+* StringVar()
 
 #### drill_db_init_ops.py
 
