@@ -39,7 +39,7 @@ def load_gui(self):
     self.scrollbar1.config(command=self.lstList1.yview) # to connect a vertical controller to the scrollbar widget, do two things
     # set the widget's yscrollcommand callbacks to the set method of the scrollbar
     # set the scrollbar's command to the yview method of the widget
-    self.scrollbar1.grid(row=1,column5,rowspan=7,columnspan=1,padx=(0,0),pady=(0,0),sticky=N+E+S) # grid property for scrollbar
+    self.scrollbar1.grid(row=1,column=5,rowspan=7,columnspan=1,padx=(0,0),pady=(0,0),sticky=N+E+S) # grid property for scrollbar
     self.lstList1.grid(row=1,column=2,rowspan=7,columnspan=3,padx=(0,0),pady=(0,0),sticky=N+E+S+W) # grid for listbox
 
     # button widgets
@@ -55,6 +55,7 @@ def load_gui(self):
 
 
     phonebook_func.create_db(self) # self: pass the key 'self' to access the class
+    # create a database by calling create_db function in phonebook_func module
     phonebook_func.onRefresh(self)
 
 
