@@ -13,7 +13,7 @@ import phonebook_func
 
 # Frame is the tkinter frame class as parent that our main window class(ParentWindow) will inherit from
 class ParentWindow(Frame):
-    def __init__ (self, master, *args, **kwargs): # init is a reserved method to initialize the attributes of a class
+    def __init__(self, master, *args, **kwargs): # init is a reserved method to initialize the attributes of a class
         Frame.__init__(self, master, *args, **kwargs) # self allows to access the attributes and methods of the class
 
         # define master frame configuration
@@ -33,8 +33,11 @@ class ParentWindow(Frame):
         # load in the GUI widgets from a separate module
         phonebook_gui.load_gui(self) # call for a load_gui function in phonebook_gui module
 
-
+"""
+The (if __name__ == "__main__":) part is basically telling Python that if this script
+is ran, it should start by running the code below this line
+"""
 if __name__ == "__main__":
-    root = tk.Tk() # tkinter module to be root (create a window from tkinter module)
-    App = ParentWindow(root) # ParentWindow(App) attach root(Window)
-    root.mainloop() # keep the main window open
+    root = tk.Tk() # this instantiates the Tk.() root frame (window) into being
+    App = ParentWindow(root) # this instantiates our own class as an App object
+    root.mainloop() # this ensures the tkinter class object, our window, to stay open util we instruct it to close

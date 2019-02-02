@@ -51,6 +51,10 @@
 * grid(), pack()
 * StringVar()
 
+#### check_files
+
+* simple GUI using tkinter module
+
 #### drill_db_init_ops.py
 
 * create database

@@ -73,7 +73,7 @@ def count_records(cur):
 def onSelect(self,event): # take event and effect the class(self)
     # calling the event is the self.lstList1 widget
     varList = event.widget # whatever triggering event
-    select = varList.curselection()[0] # pass the index of selected user
+    select = varList.curselection()[0] # pass the index of selected user, [0] zeroing out the position of the list so that it encompasses everything in it
     value = varList.get(select) # (select): whatever index number is
     conn = sqlite3.connect('phonebook.db')
     with conn:
@@ -84,7 +84,7 @@ def onSelect(self,event): # take event and effect the class(self)
         for data in varBody:
             self.txt_fname.delete(0,END) # delete(clear the textbox)
             self.txt_fname.insert(0,data[0]) # insert the returned value at index 0
-            self.txt_lname.delete(0,END)
+            self.txt_lname.delete(0,END) # [0] zeroing out the position of the list so that it encompasses everything in it
             self.txt_lname.insert(0,data[1])
             self.txt_phone.delete(0,END)
             self.txt_phone.insert(0,data[2])
@@ -186,7 +186,7 @@ def onRefresh(self):
             cursor.execute("""SELECT col_fullname FROM tbl_phonebook""")
             varList = cursor.fetchall()[i]
             for item in varList:
-                self.lstList1.insert(0,str(item))
+                self.lstList1.insert(0,str(item)) # [0] zeroing out the position of the list so that it encompasses everything in it
                 i = i + 1
     conn.close()
 
