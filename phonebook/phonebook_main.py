@@ -28,7 +28,7 @@ class ParentWindow(Frame):
         # the user clicks the upper corner, "X" on Windows OS
         self.master.protocol("WM_DELETE_WINDOW", lambda: phonebook_func.ask_quit(self)) # protocol: rule, lambda: call lambda function(anonymous function)
         # self: key to access everyting within the class
-        arg = self.master
+        #arg = self.master
         
         # load in the GUI widgets from a separate module
         phonebook_gui.load_gui(self) # call for a load_gui function in phonebook_gui module
