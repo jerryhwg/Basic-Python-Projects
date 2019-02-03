@@ -53,7 +53,20 @@
 
 #### check_files
 
-* simple GUI using tkinter module
+* simple GUI for checking files
+* tkinter module
+* class, function
+* 3 modules
+* label, entry, button widget
+* grid()
+
+#### list_directory
+
+* simple GUI for listing a selected directory
+* tkinter module
+* class, function
+* label, entry, button widget
+* askdirectory()
 
 #### drill_db_init_ops.py
 
