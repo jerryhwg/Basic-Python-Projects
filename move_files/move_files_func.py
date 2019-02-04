@@ -62,17 +62,37 @@ def get_tgtpath(self):
                 return dirname
 
 
+conn = sqlite3.connect('txt_files.db')
+
+# Create a new database and a new table
+with conn:
+        cur = conn.cursor()
+        cur.execute("CREATE TABLE IF NOT EXISTS tbl_txtfiles( \
+                ID INTEGER PRIMARY KEY AUTOINCREMENT, \
+                col_txtfile TEXT, \
+                col_timestamp INTEGER \
+                )")
+        conn.commit()
+#conn.close()
+
+
 def move_files(self):
         files = list(os.listdir(srcPath))
+        with conn:
+                cur = conn.cursor()
         for fName in files:
                 if fName.endswith(".txt"):
                         abSrcPath = os.path.join(srcPath,fName)
                         fDate = os.path.getmtime(abSrcPath)
+                        # ensure to put ,(comma) after fDate to make the parameter a tuple
+                        cur.execute('INSERT INTO tbl_txtfiles(col_txtfile, col_timestamp) VALUES (?, ?)', (fName, fDate,))
+                        conn.commit()
                         abTgtPath = os.path.join(tgtPath,fName)
                         #print("Source Files: {}".format(abTgtPath)) # for debug purpose
                         #print("Destination Files: {}".format(abTgtPath)) # for debug purpose
                         shutil.move(abSrcPath, abTgtPath)
                         print("The processed text files are '{}' and its last update time is '{}'".format(abTgtPath,fDate)) # for debug purpose
+        conn.close()
 
 
 if __name__ == "__main__":
