@@ -22,7 +22,7 @@ def load_gui(self):
     self.btn_srcpath.grid(row=2,column=1,rowspan=1,columnspan=1,padx=(30,10),pady=(10,10),sticky=W)
     self.btn_tgtpath = tk.Button(self.master,width=15,height=2,text='Select a directory...',command=lambda: move_files_func.get_tgtpath(self)) # call get_dirname()
     self.btn_tgtpath.grid(row=4,column=1,rowspan=1,columnspan=1,padx=(30,10),pady=(10,10),sticky=W)
-    self.btn_movfiles = tk.Button(self.master,width=15,height=2,text='Move txt files...',command=lambda: move_files_func.get_srcpath(self)) # call get_dirname()
+    self.btn_movfiles = tk.Button(self.master,width=15,height=2,text='Move txt files...',command=lambda: move_files_func.move_files(self)) # call get_dirname()
     self.btn_movfiles.grid(row=6,column=1,rowspan=1,columnspan=1,padx=(30,10),pady=(15,10),sticky=W)
     self.btn_close = tk.Button(self.master,width=12,height=2,text='Close Program',command=lambda: move_files_func.ask_quit(self)) # call ask_quit()
     self.btn_close.grid(row=6,column=5,rowspan=1,columnspan=1,padx=(30,0),pady=(15,10),sticky=E)

@@ -3,9 +3,10 @@
 ### move_files app
 
 * moving files from a source directory to a target directory in GUI
-* tkinter module
 * class, function, modules
-* label, entry, button
+* module: os, tkinter, shutil
+* askdirectory(), listdir(), path.join(), getmtime(), move()
+* widget: label, entry, button
 * loop
 * sqlite3 database
 
