@@ -31,8 +31,10 @@
 #### basic_class.py
 
 * parent, child class
-* inheritance
-* instantiate
+* class attribute, behavior(action)
+* inherit, instantiation, constructor
+* return to a calling method
+* dunder method
 
 #### basic_db_init.py
 
