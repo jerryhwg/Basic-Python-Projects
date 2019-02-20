@@ -1,6 +1,6 @@
 # Basic-Python-Projects
 
-### move_files app
+## move_files app
 
 * moving files from a source directory to a target directory in GUI
 * class, function, modules
@@ -10,14 +10,14 @@
 * loop
 * sqlite3 database
 
-### phonebook app
+## phonebook app
 
 * phonebook app
 * python tkinter module
 * sqlite3 database
 * separate modules
 
-### game_nice_mean.py
+## game_nice_mean.py
 
 * passing in variables
 * function with variable and return variable
@@ -25,6 +25,8 @@
 * if, elif, else
 * dunder method
 * comment
+
+## Python Basics
 
 #### basic_class.py
 
