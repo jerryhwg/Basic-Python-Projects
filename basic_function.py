@@ -10,5 +10,6 @@ def color_function(name):
     return lst
 
 lst = color_function('Jesse')
+
 for i in lst:
     print(i)

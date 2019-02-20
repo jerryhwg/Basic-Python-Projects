@@ -60,6 +60,14 @@
 * import os module
 * read, write
 
+### basic_function.py
+
+* a function call from a main
+* return to a calling main
+* global, local variable
+* declar an empty variable
+* for loop, append()
+
 #### basic_loop.py
 
 * for loop
