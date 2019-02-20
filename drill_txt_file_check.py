@@ -12,7 +12,6 @@
 
 import os
 
-
 def txt_file_check():
     # specify a folder
     fPath = 'C:\\Temp\\'
@@ -28,7 +27,6 @@ def txt_file_check():
         	fDate = os.path.getmtime(abPath)
             # print the result with formatting
         	print("The found text file is '{}' and its last update time is '{}'.".format(abPath,fDate))
-    
 
 if __name__ == "__main__":
 	txt_file_check()

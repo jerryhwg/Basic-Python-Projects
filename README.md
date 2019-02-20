@@ -63,16 +63,17 @@
 ### basic_function.py
 
 * a function call from a main
-* return to a calling main
+* return to the calling main
 * global, local variable
-* declar an empty variable
+* declare an empty variable
 * for loop, append()
 
 #### basic_loop.py
 
 * for loop
 * while loop
-* function with variable and return variable
+* a function call from a main
+* return to the calling main
 
 #### basic_tkinter2.py
 
