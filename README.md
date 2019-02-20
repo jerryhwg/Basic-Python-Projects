@@ -40,8 +40,16 @@
 
 * work with database (sqlite3)
 * create database
-* add data
-* read data
+* add, read data
+
+    ```SQL
+    conn = sqlite3.connect('test.db')
+    with conn:
+    cur = conn.cursor()
+    cur.execute(SQL statement)
+    conn.commit()
+    conn.close()
+    ```
 
 #### basic_error_handle1.py
 
