@@ -3,9 +3,9 @@
 def getInfo():
     var1 = input("Please provide the first numeric value: ")
     var2 = input("Please provide the second numeric value: ")
-    compute(var1,var2)
+    compute(var1,var2) # call compute() with two variables
 
-def compute(var1,var2):
+def compute(var1,var2): # receive var1,var2
     try:
         var3 = int(var1) + int(var2)
         print("{} + {} = {}".format(var1,var2,var3))
