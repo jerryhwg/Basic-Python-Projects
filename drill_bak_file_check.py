@@ -12,7 +12,7 @@
 
 import os
 
-def txt_file_check():
+def bak_file_check():
     # specify a folder
     fPath = 'C:\\Temp\\'
 	# get all files within a specific directory (C:\Temp\)
@@ -20,13 +20,14 @@ def txt_file_check():
     # iterate through all files in a specified folder
     for fName in files:
         # check whether each file extension is txt
-        if fName.endswith(".txt"):
+        if fName.endswith(".bak"):
             # get the concatenated file name
         	abPath = os.path.join(fPath,fName)
             # check the file's last update time
         	fDate = os.path.getmtime(abPath)
             # print the result with formatting
         	print("The found text file is '{}' and its last update time is '{}'.".format(abPath,fDate))
+            #os.remove(abPath)
 
 if __name__ == "__main__":
-	txt_file_check()
+	bak_file_check()
