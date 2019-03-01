@@ -105,7 +105,7 @@
 * add data from a tuple
 * read data with files with ".txt"
 
-#### drill_txt_file_check.py
+#### bak_file_check.py
 
 * for loop
 * os module: listdir(), path.join(), path.getmtime()

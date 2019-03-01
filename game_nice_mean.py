@@ -5,8 +5,9 @@
 
 def start(nice=0,mean=0,name=""):
     # get user's name
-    name = describe_game(name)
-    nice,mean,name = nice_mean(nice,mean,name)
+    name = describe_game(name) # call describe_game() with 'name' arg (initially "") to get 'name'
+    # call nice_mean() with 'nice','mean','name' (initially, 0, 0, the returned name by describe_name()) args to get 'nice','mean','name'
+    nice,mean,name = nice_mean(nice,mean,name) 
 
 
 def describe_game(name):
@@ -36,7 +37,7 @@ def describe_game(name):
 def nice_mean(nice,mean,name):
     stop = True
     while stop:
-        show_score(nice,mean,name)
+        show_score(name,nice,mean)
         pick = input("\nA stranger approaches you for a \n conversation. Will you be nice \nor mean? (N/M) \n>>>: ").lower()
         if pick == "n":
             print("\nThe stranger walks away smiling...")
@@ -49,7 +50,7 @@ def nice_mean(nice,mean,name):
     score(nice,mean,name) # pass the 3 variables to the score()
 
 
-def show_score(nice,mean,name):
+def show_score(name,nice,mean):
     print("\n{}, your current total: \n({}, Nice) and ({}, Mean)".format(name,nice,mean))
 
 
