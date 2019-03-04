@@ -2,13 +2,11 @@
 # Game Title: Nice or Mean
 # Example for passing in variables
 
-
 def start(nice=0,mean=0,name=""):
     # get user's name
     name = describe_game(name) # call describe_game() with 'name' arg (initially "") to get 'name'
     # call nice_mean() with 'nice','mean','name' (initially, 0, 0, the returned name by describe_name()) args to get 'nice','mean','name'
     nice,mean,name = nice_mean(nice,mean,name) 
-
 
 def describe_game(name):
     # if we do not already have this user's name,
@@ -27,7 +25,6 @@ def describe_game(name):
                     stop = False
     return name # return name to start()
 
-
 def nice_mean(nice,mean,name):
     stop = True
     while stop:
@@ -43,10 +40,8 @@ def nice_mean(nice,mean,name):
             stop = False
     score(nice,mean,name) # pass the 3 variables to the score()
 
-
 def show_score(name,nice,mean):
     print("\n{}, your current total: \n({}, Nice) and ({}, Mean)".format(name,nice,mean))
-
 
 def score(nice,mean,name):
     # score function is being passed the values stored within the 3 variables
@@ -57,20 +52,17 @@ def score(nice,mean,name):
     else: # else, call nice_mean function passing in the variables so it can use them
         nice_mean(nice,mean,name)
 
-
 def win(nice,mean,name):
     # Substitute the {} wildcards with our variable values
     print("\nNice job {}, you win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name))
     # call again function and pass in our variables
     again(nice,mean,name)
 
-
 def lose(nice,mean,name):
     # Substitute the {} wildcards with our variable values
     print("\nAhhh too bad, game over! \n{}, you live in a dirty beat-up \nvan by the river, wretched and alone!".format(name))
     # call again function and pass in our variables
     again(nice,mean,name)
-
 
 def again(nice,mean,name):
     stop = True
@@ -86,13 +78,11 @@ def again(nice,mean,name):
         else:
             print("\nEnter ( Y ) for 'YES', ( N ) for 'NO':\n>>> ")
 
-
 def reset(nice,mean,name):
     nice = 0
     mean = 0
     # Notice, I do not reset the name variable as that same user has elected to play again
     start(nice,mean,name)
-
 
 if __name__ == "__main__":
     start()
