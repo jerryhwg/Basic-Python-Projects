@@ -1,6 +1,7 @@
 
 # parent class
 class Organism:
+    # class attributes
     name = "Unknown"
     species = "Unknown"
     legs = None # None is a special data type
@@ -9,12 +10,14 @@ class Organism:
     origin = "Unknown"
     carbon_based = True
 
-    def information(self):
+    # method belong to this class
+    def information(self): # self: access to the 'Organism' class
         msg = "\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA: {}\nOrigin: {}\nCarbon Based: {}".format(self.name,self.species,self.legs,self.arms,self.dna,self.origin,self.carbon_based)
-        return msg
+        return msg # return to the main calling this method 'information'
 
 # child class instance
 class Human(Organism): # inherit from Organism
+    # override with its own custom attribute
     name = 'MacGuyver'
     species = 'Homesapien'
     legs = 2
@@ -53,8 +56,8 @@ class Bacterium(Organism):
 
 
 if __name__ == "__main__":
-    # instantiate
-    human = Human()
+    
+    human = Human() # instantiate
     print(human.information()) # inherit
     print(human.ingenuity()) # override with child class
 

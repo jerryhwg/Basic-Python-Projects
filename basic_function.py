@@ -1,8 +1,9 @@
+# global variable
 mySentence = 'loves the color'
 
 color_list = ['red','blue','green','pink','white','black']
 
-def color_function(name):
+def color_function(name): # name: required parameters
     lst = [] # declar an empty local var (lst)
     for i in color_list:
         msg = "{0} {1} {2}".format(name,mySentence,i)

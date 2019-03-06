@@ -1,6 +1,6 @@
 # Python: 3.7.2
 # Game Title: Nice or Mean
-# Example for passing in variables
+# Example for chains of functions and passing in variables between functions
 
 def start(nice=0,mean=0,name=""):
     # get user's name
