@@ -6,7 +6,8 @@ def start(nice=0,mean=0,name=""):
     # get user's name
     name = describe_game(name) # call describe_game() with 'name' arg (initially "") to get 'name'
     # call nice_mean() with 'nice','mean','name' (initially, 0, 0, the returned name by describe_name()) args to get 'nice','mean','name'
-    nice,mean,name = nice_mean(nice,mean,name) 
+    # nice,mean,name = nice_mean(nice,mean,name) 
+    nice_mean(nice,mean,name) # start nice_mean game with satisfied parameters
 
 def describe_game(name):
     # if we do not already have this user's name,
