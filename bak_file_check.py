@@ -26,7 +26,7 @@ def bak_file_check():
             # check the file's last update time
         	fDate = os.path.getmtime(abPath)
             # print the result with formatting
-        	print("The found text file is '{}' and its last update time is '{}'.".format(abPath,fDate))
+        	print("The found backup file is '{}' and its last update time is '{}'.".format(abPath,fDate))
             #os.remove(abPath)
 
 if __name__ == "__main__":
