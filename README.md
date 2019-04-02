@@ -1,4 +1,4 @@
-# Basic-Python-Projects
+# Python-Projects
 
 ## move_files app
 
@@ -25,6 +25,10 @@
 * if, elif, else
 * dunder method
 * comment
+
+## Django
+
+* Python web framework
 
 ## Python Basics
 
