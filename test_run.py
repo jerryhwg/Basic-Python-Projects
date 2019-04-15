@@ -138,3 +138,78 @@ with open(filename) as file_object:
 for line in lines:
     print(line)
 
+filename = 'journal.txt'
+with open(filename, 'w') as file_object:
+    file_object.write("I love programming")
+
+filename = 'journal.txt'
+with open(filename, 'a') as file_object:
+    file_object.write("\nI love making games")
+
+prompt = "How many tickets do you need?"
+num_tickets = input(prompt)
+
+try:
+    num_tickets = int(num_tickets)
+except ValueError:
+    print("Please try again.")
+else:
+    print("Your tickets are printing.")
+
+user = ['val', 'bob', 'mia', 'ron', 'ned']
+first_user = users[0]
+second_user = users[1]
+newest_user = users[-1]
+
+users[0] = 'valerie'
+users[-2] = 'ronald'
+
+users.append('amy')
+
+user = []
+users.append('val')
+users.append('bob')
+users.append('mia')
+
+users.insert(0, 'joe')
+users.insert(3, 'bea')
+
+del users[-1]
+users.remove('mia')
+
+most_recent_user = users.pop()
+print(most_recent_user)
+
+first_user = users.pop(0)
+print(first_user)
+
+num_users = len(users)
+print("We have " + str(num_users) + " users")
+
+users.sort()
+users.sort(reverse=True)
+
+print(sorted(users))
+print(sorted(users, reverse=True))
+users.reverse()
+
+for user in users:
+    print(user)
+
+for user in users:
+    print("Welcome, " + user + "!")
+print("Welcome, we're glad to see you all!")
+
+for number in range(1001):
+    print(number)
+
+for number in range(1, 1001):
+    print(number)
+
+numbers = list(range(1, 1001))
+
+ages = [93, 99, 66, 17, 85, 1, 35, 82, 2, 77]
+youngest = min(ages)
+oldest = max(ages)
+total_years = sum(ages)
+
