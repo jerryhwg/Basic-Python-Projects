@@ -213,3 +213,101 @@ youngest = min(ages)
 oldest = max(ages)
 total_years = sum(ages)
 
+finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
+first_three = finishers[:3]
+middle_three = finishers[1:4]
+last_three = finishers[-3:]
+
+finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
+copy_of_finishers = finishers[:]
+
+squares = []
+for x in range(1, 11):
+    square = x**2
+    squares.append(square)
+
+squares = [x**2 for x in range(1, 11)]
+
+names = ['kai', 'abe', 'ada', 'gus', 'zoe']
+upper_names = []
+for name in names:
+    upper_names.append(name.upper())
+
+upper_name = [name.upper() for name in names]
+
+dimensions = (800, 600)
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = (800, 600)
+print(dimensions)
+dimensions = (1200, 900)
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+print(alien_0['points'])
+
+alien_color = alien_0.get('color')
+alien_points = alien_0.get('points', 0)
+print(alien_color)
+print(alien_points)
+
+alien_0['x'] = 0
+alien_0['y'] = 25
+alien_0['speed'] = 1.5
+
+alien_0 = {}
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+
+alien_0['color'] = 'yellow'
+alien_0['points'] = 10
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+
+fav_languages = {'jen':'python', 'sarah':'c', 'edward':'ruby', 'phil':'python'}
+for name, language in fav_language.items():
+    print(name + ": " + language)
+
+for name in fav_languages.keys():
+    print(name)
+
+for languages in fav_languages.values():
+    print(language)
+
+for name in sorted(fav_languages.keys()):
+    print(name + ": " + languages)
+
+num_responses = len(fav_languages)
+
+users = []
+
+new_user = {'last':'fermi', 'first':'enrico', 'username': 'efermi'}
+users.append(new_user)
+
+for user_dict in users:
+    for k, v in user_dict.items():
+        print(k + ": " + v)
+    print("\n")
+
+
+users = [
+    {
+        'last': 'fermi',
+        'first': 'enrico',
+        'username': 'efermi',
+    },
+    {
+        'last': 'curie',
+        'first': 'marie',
+        'username': 'mcurie',
+    }
+]
+
+for user_dict in users:
+    for k, v in user_dict.items():
+        print(k + ": " + v)
+    print("\n")
+
