@@ -311,3 +311,244 @@ for user_dict in users:
         print(k + ": " + v)
     print("\n")
 
+
+fav_languages = {
+    'jen':['python', 'ruby'],
+    'sarah':['c'],
+    'edward':['ruby','go'],
+    'phil':['python','haskell'],
+}
+
+for name, langs in fav_languages.items():
+    print(name + ": ")
+    for lang in langs:
+        print("- ": lang)
+
+
+users = {
+    'aeistein':{
+        'first':'albert',
+        'last':'einstein',
+        'location':'princeton',
+    }
+    'mcurie': {
+        'first':'marie',
+        'last':'curie',
+        'location':'paris',
+    }
+}
+
+for username, user_dict in users.items():
+    print("\nUsername: " + username)
+    full_name = user_dict['first'] + " "
+    full_name += user_dict['last']
+    location = user_dict['location']
+
+    print("\tFull name: " + full_name.title())
+    print("\tLocation: " + location.title())
+
+
+fav_languages = OrderedDict()
+fav_languages['jen'] = ['python', 'ruby']
+fav_languages['sarah'] = ['c']
+fav_languages['edward'] = ['ruby', 'go']
+fav_languages['phil'] = ['python', 'haskell']
+
+for name, langs in fav_languages.items():
+    print(name + ":")
+    for lang in langs:
+        print("- " + lang)
+
+aliens = []
+for alien_num in range(1000000):
+    new_alien = {}
+    new_alien['color'] = 'green'
+    new_alien['points'] = 5
+    new_alien['x'] = 20 * alien_num
+    new_alien['y'] = 0
+    aliens.append(new_alien)
+
+num_aliens = len(aliens)
+print("Number of aliens created:")
+print(num_aliens)
+
+car = 'Audi'
+car.lower() == 'audi'
+True
+
+age_0 = 22
+age_1 = 18
+age_0 >= 21 and age_1 >= 21
+False
+
+age_1 = 23
+age_0 >= 21 and age_1 >= 21
+True
+
+game_active = True
+can_edit = False
+
+age = 19
+
+if age >= 18:
+    print("You are old enough to vote!")
+
+age = 17
+if age >= 18:
+    print("You're old enough to vote!")
+else:
+    print("You can't vote yet.")
+
+age = 12
+
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+else:
+    price = 10
+
+print("Your cost is $" + str(price) + ".")
+
+players = ['al', 'bea', 'cyn', 'dale']
+'al'in players
+True
+
+banned_users = ['ann', 'chad', 'dee']
+user = 'erin'
+if user not in banned_users:
+    print("You can play!")
+
+
+players = []
+if players:
+    for player in players:
+        print("Player: " + player.title())
+else:
+    print("We have no players yet!")
+
+
+name = input("What's your name? ")
+print("Hello, " + name + ".")
+
+age = input("How old are you? ")
+age = int(age)
+
+if age >= 18:
+    print("\nYou can vote!")
+else:
+    print("\nYou can't vote yet.")
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+
+message = ""
+while message != "quit":
+    message = input(prmot)
+
+    if message != quit:
+        print(message)
+
+active = True
+while active:
+    message = input(prompt)
+
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+
+while True:
+    city = input(prompt)
+
+    if city == 'quit':
+        break
+    else:
+        print("I've been to " + city + "!")
+
+banned_users = ['eve', 'fred', 'gary', 'helen']
+prompt = "\nAdd a player to your team."
+prompt += "\nEnter 'quit' when you're done."
+
+players = []
+while True:
+    player = input(prompt)
+    if player == 'quit':
+        break
+    elif player in banned_users:
+        print(player + " is banned!")
+        continue
+    else:
+        players.append(player)
+
+print("\nYour team:")
+for player in players:
+    print(player)
+
+pets = ['dog', 'cat', 'dog', 'fish', 'cat', 'rabbit', 'cat']
+print(pets)
+while 'cat'in pets:
+    pets.remove('cat')
+print(pets)
+
+def greet_user():
+    print("Hello!")
+greet_user()
+
+def greet_user(username):
+    print("Hello, " + username + "!")
+
+greet_user('jesse')
+greet_user('diana')
+greet_user('brandon')
+
+def describe_pet(animal, name):
+    print("\nI have a " + animal + ".")
+    print("Its name is " + name + ".")
+describe_pet('hamster', 'harry')
+describe_pet('dog', 'willie')
+
+def describe_pet(animal, name):
+    print("\nI have a " + animal + ".")
+    print("Its name is " + name + "."\)
+describe_pet(animal='hamster', name='harry')
+describe_pet(name='willie', animal='dog')
+
+def describe_pet(name, animal='dog'):
+    print("\nI have a " + animal + ".")
+    print("Its name is " + name + ".")
+
+describe_pet('harry', 'hamster')
+describe_pet('willie')
+
+def describe_pet(animal, name=None):
+    print("\n I have a " + animal + ".")
+        if name:
+            print("Its name is " + name + ".")
+describe_pet('hamster', 'harry')
+desdribe_pet('snake')
+
+def get_full_name(first, last):
+    full_name = first + ' ' + last
+    return full_name.title()
+
+musician = get_full_name('jimi', 'hendrix')
+print(musician)
+
+def build_person(first, last):
+    person = {'first': first, 'last': last}
+    return person
+
+musician = build_person('jimi', 'hendrix')
+print(musician)
+
+def build_person(first, last, age=None):
+    person = {'first': first, 'last': last}
+    if age:
+        person['age'] = age
+    return person
+
+musician = build_person('jimi', 'hendrix', 27)
+print(musician)
