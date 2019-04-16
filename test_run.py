@@ -943,3 +943,101 @@ except FileNotFoundError:
 else:
     print(numbers)
 
+# Test code
+# A function to test
+def get_full_name(first, last):
+    full_name = "{0} {1}".format(first, last)
+    return full_name.title()
+
+# Using the function
+from full_names import get_full_name
+
+janis = get_full_name('janis', 'joplin')
+print(janis)
+
+bob = get_full_name('bob', 'dylan')
+print(bob)
+
+# Building a testcase with one unit test
+import unittest
+from full_names import get_full_name
+
+class NamesTestCase(unittest.TestCase):
+    def test_first_last(self):
+        full_name = get_full_name('janis', 'joplin')
+        self.assertEqual(full_name, 'Janis Joplin')
+
+unittest.main()
+
+# Testing middle names
+import unittest
+from full_names import get_full_name
+
+class NamesTestCase(unittest.TestCase):
+    def test_first_last(self):
+        full_name = get_full_name('janis', 'joplin')
+        self.assertEqual(fullname, 'Janis Joplin')
+
+    def test_middle(self):
+        full_name = get_full_name('david', 'roth', 'lee')
+        self.assertEqual(full_name, 'David Lee Roth')
+unittest.main()
+
+# Test methods
+assertEqual(a, b)
+assertNotEqual(a, b)
+assertTrue(x)
+assertFalse(x)
+assertIn(item, list)
+assertNotIn(item, list)
+
+# A class to test
+accountant.py
+class Accountant():
+    def __init__(self, balance=0):
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance += amount
+    def withdraw(self, amount):
+        self.balance -= amount
+
+# Test case
+import unittest
+from accountant import Accountant
+
+class TestAccountant(unittest.TestCase):
+    def test initial balance(self):
+        acc = Accountant()
+        self.assertEqual(acc.balance, 0)
+    
+        acc = Accountant(100)
+        self.assertEqual(acc.balance, 100)
+
+# Using setUp() to support multiple tests
+import unittest
+from accountant import Accountant
+
+class TestAccountant(unittest.TestCase):
+
+    def setUp(self):
+        self.acc = Accountant()
+    def test_initial_balance(self):
+        self.assertEqual(self.acc.balance, 0)
+
+        acc = Accountant(100)
+        self.assertEqual(acc.balance, 100)
+
+    def test_deposit(self):
+        self.acc.deposit(100)
+        self.assertEqual(self.acc.balance, 100)
+
+        self.acc.deposit(100)
+        self.acc.deposit(100)
+        self.assertEqual(self.acc.balance, 300)
+
+    def test_withdrawal(self):
+        self.acc.deposit(1000)
+        self.acc.withdraw(100)
+        self.assertEqual(self.acc.balance, 900)
+
+unittest.main()
