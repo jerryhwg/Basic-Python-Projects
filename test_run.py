@@ -614,3 +614,97 @@ user_1 = build_profile('marie', 'curie', location='paris', field='chemistry')
 
 print(user_0)
 print(user_1)
+
+pizza.py
+def make_pizza(size, *toppings):
+    print("\nMaking a " + size + " pizza.")
+    print("Toppings")
+    for topping in toppings:
+        print("- " + topping)
+
+import pizza
+
+pizza.make_pizza('medium', 'pepperoni')
+pizza.make_pizza('small', 'bacon', 'pineapple')
+
+from pizza import make_pizza
+make_pizza('medium', 'pepperoni')
+make_pizza('small', 'bacon', 'pineapple')
+
+import pizza as p
+p.make_pizza('medium', 'pepperoni')
+p.make_pizza('small', 'becon', 'pineapple')
+
+from pizza import make_pizza as mp
+mp('medium', 'pepperoni')
+mp('small', 'becon', 'pineapple')
+
+from pizza import *
+make_pizza('medium', 'pepperoni')
+make_pizza('small', 'becon', 'pineapple')
+
+
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+        self.fuel_capacity = 15
+        self.fuel_level = 0
+
+    def fill_tank(self):
+        self.fuel_level = self.fuel_capacity
+        print("Fuel tank is full")
+
+    def drive(self):
+        print("The car is moving")
+
+my_car = Car('audi', 'a4', 2016)
+
+print(my_car.make)
+print(my_car.model)
+print(my_car.year)
+my_car.fill_tank()
+my_car.drive()
+
+my_car = Car('audi', 'a4', 2016)
+my_old_car = Car('subaru', 'outback', 2013)
+my_truck = Car('toyota', 'tacoma', 2010)
+
+my_new_car = Car('audi', 'a4', 2016)
+my_new_car.fuel_level = 5
+
+def update_fuel_level(self, new_level):
+    if new_level <= self.fuel_capacity:
+        self.fuel_level = new_level
+    else:
+        print("The tank is full!")
+
+def add_fuel(self, amount):
+    if (self.fuel_level + amount <= self.fuel_capacity):
+        self.fuel_level += amount
+        print("Added fuel.")
+    else:
+        print("The tank won't hold that much.")
+
+class ElectricCar(Car):
+
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery_size = 70
+        self.charge_level = 0
+
+    def charge(self):
+        self.charge_level = 100
+        print("The vehicle is fully charged")
+
+    def fill_tank(self):
+        print("This car has no fuel tank!")
+
+my_ecar = ElectricCar('tesla', 'model s', 2016)
+my_ecar.charge()
+my_ecar.drive()
+
+
+# Instances as attributes
