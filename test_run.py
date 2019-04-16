@@ -793,3 +793,153 @@ for ecar in electric_fleet:
 
 print("Gas cars:", len(gas_fleet))
 print("Electric cars:", len(electric_fleet))
+
+# Reading from a file
+filename = 'siddhartha.txt'
+with open(filename) as f_obj:
+    contents = f_obj.read()
+print(contents)
+
+# Reading line by line
+filename = 'siddhartha.txt'
+with open(filename) as f_obj:
+    for line in f_obj:
+        print(line.rstrip())
+
+# Storing the lines in a list
+filename = 'siddhartha.txt'
+with open(filename) as f_obj:
+    lines = f_obj.readlines()
+for line in lines:
+    print(line.rstrip)
+
+# Writing to an empty file
+filename = 'programming.txt'
+with open(filename, 'w') as f:
+    f.write("I love programming!")
+
+# Writing multiple lines to an empty file
+filename = 'programming.txt'
+with open(filename, 'w') as f:
+    f.write("I love programming!\n")
+    f.write("I love creating new games.\n")
+
+# Appending to a file
+filename = 'programming.txt'
+with open(filename, 'a') as f:
+    f.write("I also love working with data.\n")
+    f.write("I love making apps as well.\n")
+
+# Opening a file from a subfolder
+f_path = "text_files/alice.txt"
+with open(f_path) as f_obj:
+    lines = f_obj.readlines()
+for line in lines:
+    print(line.rstrip())
+
+# Opening a file using an absolute path
+f_path = "/home/books/alice.txt"
+with open(f_path) as f_obj:
+    lines = f_obj.readlines()
+
+# Opening a file on Windows
+f_path = "C:\Users\books\alice.txt"
+with open(f_path) as f_obj:
+    lines = f_obj.readlines()
+
+# Handling the ZeroDivisionError exception
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+
+# Handling the FileNotFoundError exception
+f_name = 'siddhartha.txt'
+try:
+    with open(f_name) as f_obj:
+        lines = f_obj.readlines()
+except FileNotFoundError:
+    msg = "Can't find file {0}.".format(f_name)
+    print(msg)
+
+# Try writing your code without a try block, and make it generate an error. 
+# The traceback will tell you what kind of exception your program needs to handle.
+
+# Else block
+print("Enter two numbers. I will divide them")
+x = input("First number: ")
+y = input("Second number: ")
+try:
+    result = int(x) / int(y)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+else:
+    print(result)
+
+# Exception handling
+print("Enter two numbers. I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+    x = input("\nFirst number: ")
+    if x == 'q':
+        break
+    y = input("Second number: ")
+    if y == 'q':
+        break
+
+    try:
+        result = int(x) / int(y)
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+    else:
+        print(result)
+
+# Using the pass statement in an else block
+f_names = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+
+for f_name in f_names:
+    try:
+        with open(f_name) as f_obj:
+            lines = f_obj.readlines()
+    except FileNotFoundError:
+        pass
+    else:
+        num_lines = len(lines)
+        msg = "{0} has {1} lines.".format(f_name, num_lines)
+        print(msg)
+
+# Use Exception
+try:
+    # Do something
+except Exception as e:
+    print(e, type(e))
+
+# Stroing data with json
+# Using json.dump() to store data
+import json
+numbers = [2, 3, 5, 7, 11, 13]
+filename = 'numbers.json'
+with open(filename, 'w') as f_obj:
+    json.dump(numbers, f_obj)
+
+# Using json.load() to read data
+import json
+
+filename = 'numbers.json'
+with open(filename) as f_obj:
+    numbers = json.load(f_obj)
+print(numbers)
+
+# Making sure the stored data exists
+import json
+f_name = 'numbers.json'
+try:
+    with open(filename) as f_obj:
+        numbers = json.load(f_obj)
+except FileNotFoundError:
+    msg = "Can't find {0}.".format(f_name)
+    print(msg)
+else:
+    print(numbers)
+
