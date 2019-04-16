@@ -552,3 +552,65 @@ def build_person(first, last, age=None):
 
 musician = build_person('jimi', 'hendrix', 27)
 print(musician)
+
+def greet_users(names):
+    for name in names:
+        msg = "Hello, " + name + "!"
+        print(msg)
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+
+
+def print_models(unprinted, printed):
+    while unprinted:
+        current_model = unprinted.pop()
+        print("Printing " + current_model)
+        printed.append(current_model)
+
+unprinted = ['phone case', 'pendant', 'ring']
+printed = []
+print_models(unprinted, printed)
+
+print("\nUnprinted: ", unprinted)
+print("Printed: ", printed)
+
+
+def print_models(unprinted, printed):
+    while unprinted:
+        current_model = unprinted.pop()
+        print("Printing " + current_model)
+        printed.append(current_model)
+
+original = ['phone case', 'pendant', 'ring']
+printed = []
+
+print_models(original[:], printed)
+print("\nOriginal: ", original)
+print("Printed: ", printed)
+
+
+def make_pizza(size, *toppings):
+    print("\nMaking a " + size + " pizza.")
+    print("Toppings:")
+    for topping in toppings:
+        print("- " + topping)
+
+make_pizza('small', 'pepperoni')
+make_pizza('large', 'bacon bits', 'pineapple')
+make_pizza('medium', 'mushrooms', 'peppers', 'onions', 'extra cheese')
+
+
+def build_profile(first, last, **user_info):
+    profile = {'first': first, 'last': last}
+
+    for key, value in user_info.items():
+        profile[key] = value
+    
+    return profile
+
+user_0 = build_profile('albert', 'einstein', location='princenton')
+user_1 = build_profile('marie', 'curie', location='paris', field='chemistry')
+
+print(user_0)
+print(user_1)
