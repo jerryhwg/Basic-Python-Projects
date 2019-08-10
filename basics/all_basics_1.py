@@ -92,7 +92,7 @@ colors.sort(reverse=True)
 print(sorted(colors))
 print(sorted(colors, reverse=True))
 
-# Reversing the order of a list
+# Reversing the order of a list (permanent)
 colors.reverse()
 
 # Range() function
