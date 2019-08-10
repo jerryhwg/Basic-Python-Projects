@@ -161,7 +161,7 @@ while msg != 'quit':
 # Pattern 2
 active = True
 while active:
-    message = input(prompt)
+    message = input('prompt')
 
     if message == 'quit':
         active = False
@@ -171,7 +171,7 @@ while active:
 
 # Pattern 3
 while True:
-    message = input(prompt)
+    message = input('prompt')
 
     if message == 'quit':
         break
