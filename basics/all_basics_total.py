@@ -156,7 +156,7 @@ except ValueError:
 else:
     print("Your tickets are printing.")
 
-user = ['val', 'bob', 'mia', 'ron', 'ned']
+users = ['val', 'bob', 'mia', 'ron', 'ned']
 first_user = users[0]
 second_user = users[1]
 newest_user = users[-1]
@@ -166,7 +166,7 @@ users[-2] = 'ronald'
 
 users.append('amy')
 
-user = []
+users = []
 users.append('val')
 users.append('bob')
 users.append('mia')
