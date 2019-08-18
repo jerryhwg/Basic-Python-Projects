@@ -10,6 +10,6 @@ def animal_crackers(words):
     return wordlist[0][0] == wordlist[1][0] # result: True
 
 if __name__ == "__main__":
-    print(animal_crackers('Crazy cat'))
+    animal_crackers('Crazy cat')
 
 # key: words.lower().split()

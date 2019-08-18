@@ -1,6 +1,6 @@
 # Python 3.7.2
 # module 12:56
-# Given two integer arrays, find which element is missing in the second array
+# Given two integer arrays, find which first element is missing in the second array
 # Usage: finder2(arr1,arr2)
 # > CHECK <
 
@@ -8,7 +8,7 @@ import collections
 
 def finder2(arr1,arr2):
 
-    # using default dict to avoid key errors
+    # using default dict to avoid missing key errors
     d = collections.defaultdict(int)
 
     # add a count for every instance in array 2 and create a list of d[num]
@@ -34,7 +34,7 @@ it will automatically add it for you instead of a missing key error
 
 """
 Test:
-finder1([1,2,3,4,5,6,7],[3,7,2,1,4,6])
+finder2([1,2,3,4,5,6,7],[3,7,2,1,4,6])
 
 Output:
 5

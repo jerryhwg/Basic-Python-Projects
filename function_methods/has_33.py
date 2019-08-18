@@ -10,6 +10,6 @@ def has_33(nums):
     return False
 
 if __name__ == "__main__":
-    print(has_33([1,3,3,7]))
+    has_33([1,3,3,7])
 
 # key: nums[i:i+2]

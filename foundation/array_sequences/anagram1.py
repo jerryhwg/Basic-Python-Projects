@@ -13,7 +13,7 @@ def anagram1(s1,s2):
 Test:
 s1 = 'clint eastwood'
 s2 = 'old west action'
-anagram2(s1,s2)
+anagram1(s1,s2)
 
 Output:
 True

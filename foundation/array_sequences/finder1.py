@@ -1,6 +1,6 @@
 # Python 3.7.2
 # module 12:56
-# Given two integer arrays, find which (first) element is missing in the second array
+# Given two integer arrays, find which first element is missing in the second array
 # Usage: finder1(arr1,arr2)
 
 def finder1(arr1,arr2):
