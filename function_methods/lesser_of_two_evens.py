@@ -10,6 +10,6 @@ def lesser_of_two_evens(n1,n2):
         return max(n1,n2)
 
 if __name__ == "__main__":
-    print(lesser_of_two_evens(2,5))
+    lesser_of_two_evens(2,5)
 
 # key: min(n1,n2), max(n1,n2)
